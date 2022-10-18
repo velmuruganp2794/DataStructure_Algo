@@ -11,7 +11,7 @@ public class ShortestDistanceToChar {
 
 	}
 	
-public int[] shortestToChar(String s, char c) {
+    public int[] shortestToChar(String s, char c) {
         
         int leftD=0, rightD=0;
         int output[] = new int[s.length()];
@@ -25,8 +25,6 @@ public int[] shortestToChar(String s, char c) {
 
              output[i] = (leftD<rightD) ? leftD:rightD;
 
-           
-             
 
 
         }
