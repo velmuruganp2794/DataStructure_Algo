@@ -32,11 +32,9 @@ public class LC_88_MergeSortedArray {
 	 * Return nums1 array. 8. Check any remaining elements in nums2, if yes add
 	 * the elements in nums1.
 	 *
-	 * ######Time Complexity########
-	 * O(m+n)+O(n) ==> O(m+n)
+	 * ######Time Complexity######## O(m+n)+O(n) ==> O(m+n)
 	 * 
-	 * ######Space Complexity#######
-	 * O(m+n)
+	 * ######Space Complexity####### O(m+n)
 	 */
 
 	@Test
@@ -59,25 +57,26 @@ public class LC_88_MergeSortedArray {
 		// Time complexity = O(m+n)
 		if (m == 0)
 			System.arraycopy(nums2, 0, nums1, 0, nums1.length);
-		while (m > 0 && n > 0) {
+		else {
+			while (m > 0 && n > 0) {
 
-			if (nums1[m - 1] < nums2[n - 1]) {
-				nums1[m + n - 1] = nums2[n - 1];
-				n--;
-			} else {
-				nums1[m + n - 1] = nums1[m - 1];
-				m--;
+				if (nums1[m - 1] < nums2[n - 1]) {
+					nums1[m + n - 1] = nums2[n - 1];
+					n--;
+				} else {
+					nums1[m + n - 1] = nums1[m - 1];
+					m--;
+				}
+
 			}
 
+			while (n > 0) {
+				nums1[m + n - 1] = nums2[n - 1];
+				n--;
+			}
+
+			Arrays.toString(nums1);
 		}
-
-		while (n > 0) {
-			nums1[m + n - 1] = nums2[n - 1];
-			n--;
-		}
-
-		Arrays.toString(nums1);
-
 	}
 
 }
