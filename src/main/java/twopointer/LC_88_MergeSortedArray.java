@@ -34,7 +34,7 @@ public class LC_88_MergeSortedArray {
 	 *
 	 * ######Time Complexity######## O(m+n)+O(n) ==> O(m+n)
 	 * 
-	 * ######Space Complexity####### O(m+n)
+	 * ######Space Complexity####### O(1)
 	 */
 
 	@Test
