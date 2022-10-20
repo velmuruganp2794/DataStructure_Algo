@@ -1,10 +1,10 @@
 package twopointer;
 
-public class MerginStringAlternatively {
+public class LC_1768_MerginStringAlternatively {
 
 	public static void main(String[] args) {
 		
-		MerginStringAlternatively obj = new MerginStringAlternatively();
+		LC_1768_MerginStringAlternatively obj = new LC_1768_MerginStringAlternatively();
 		String mergeAlternately = obj.mergeAlternately("abc", "pqr");
 		System.out.println(mergeAlternately);
 	}

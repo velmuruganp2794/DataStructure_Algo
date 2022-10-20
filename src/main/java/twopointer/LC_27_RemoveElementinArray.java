@@ -1,10 +1,10 @@
 package twopointer;
 
-public class RemoveElementinArray {
+public class LC_27_RemoveElementinArray {
 
 	public static void main(String[] args) {
 		
-		RemoveElementinArray obj = new RemoveElementinArray();
+		LC_27_RemoveElementinArray obj = new LC_27_RemoveElementinArray();
 		obj.removeElement(new int[] {3,2,2,3}, 3);
 		
 

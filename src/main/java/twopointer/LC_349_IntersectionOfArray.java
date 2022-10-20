@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class IntersectionOfArray {
+public class LC_349_IntersectionOfArray {
 
 	public static void main(String[] args) {
-		IntersectionOfArray obj = new IntersectionOfArray();
+		LC_349_IntersectionOfArray obj = new LC_349_IntersectionOfArray();
 		int[] intersection = obj.intersection(new int[] {3,2,2,3}, new int[]{2,2});
 		System.out.println(Arrays.toString(intersection));
 

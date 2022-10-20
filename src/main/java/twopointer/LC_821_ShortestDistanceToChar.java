@@ -2,10 +2,10 @@ package twopointer;
 
 import java.util.Arrays;
 
-public class ShortestDistanceToChar {
+public class LC_821_ShortestDistanceToChar {
 
 	public static void main(String[] args) {
-		ShortestDistanceToChar obj = new ShortestDistanceToChar();
+		LC_821_ShortestDistanceToChar obj = new LC_821_ShortestDistanceToChar();
 		int[] shortestToChar = obj.shortestToChar("lovetoleetcode", 'e');
 		System.out.println(Arrays.toString(shortestToChar));
 
