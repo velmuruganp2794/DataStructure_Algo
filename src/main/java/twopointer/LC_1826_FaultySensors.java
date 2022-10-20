@@ -72,9 +72,12 @@ public class LC_1826_FaultySensors {
             return -1;
         while (index < length - 1 && sensor1[index] == sensor2[index + 1])
             index++;
-        if(index==index-1) return 1;
+        if(index==length-1) return 1;
         else return 2;		
     }
+	
+	
+	
 	
 	
 
