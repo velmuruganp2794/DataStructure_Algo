@@ -25,7 +25,7 @@ public class LC_1826_FaultySensors {
 		*/
 	
 	/*
-	  Psuedo code:
+	  Pseudo code:
 		1. index=0, length=sensor.length;
         2. traverse both the arrays and check if(sensor1[index]==sensor2[index])
         3. If yes, index = index+1

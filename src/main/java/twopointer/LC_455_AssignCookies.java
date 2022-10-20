@@ -29,7 +29,7 @@ public class LC_455_AssignCookies {
 	 * 
 	 * g = [10,9,8,7], s = [5,6,7] Output: 1
 	 * 
-	 * Psuedo code:
+	 * Pseudo code:
 	 * 
 	 * 1. Sort both the arrays, set count=0; 2. let gstart = zero th position of
 	 * g[], sstart= zero th position of s[]. 3. If s[j] >= g[i], increment the

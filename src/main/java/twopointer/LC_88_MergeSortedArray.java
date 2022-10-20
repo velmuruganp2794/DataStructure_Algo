@@ -23,7 +23,7 @@ public class LC_88_MergeSortedArray {
 	 * ## nums1[1], nums2[], m=1,n=0;
 	 * 
 	 * 
-	 * ########Psuedo Code###########:
+	 * ########Pseudo Code###########:
 	 * 
 	 * 1. Check if m is zero. return nums2 2. Start = m, end =n 3. Traverse
 	 * elements using start and end 4. compare nums1[m]<nums2[n], if yes, add

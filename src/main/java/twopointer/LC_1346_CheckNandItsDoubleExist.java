@@ -24,7 +24,7 @@ public class LC_1346_CheckNandItsDoubleExist {
 	 * 
 	 * arr = [0, 0] output = true
 	 * 
-	 * Psuedo Code: 
+	 * Pseudo Code: 
 	 * 
 	 * Approach 1: Brute force
 	 *  1. use two for loops with i=0 and j=1+1

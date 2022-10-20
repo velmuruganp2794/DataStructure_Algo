@@ -32,7 +32,7 @@ public class LC_350_IntersectionOfTwoArraysII {
 	 * 
 	 */
 	
-	/*Psuedo Code:
+	/*Pseudo Code:
 		1. Sort both the Arrays
 		2. let left, right = 0 
 		3. traverse elements in the array and check if(nums1[left]<nums2[right]) if yes, left++

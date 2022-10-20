@@ -23,7 +23,7 @@ public class LC_125_Validpalindrome {
  * Explanation: s is an empty string "" after removing non-alphanumeric characters.
  * Since an empty string reads the same forward and backward, it is a palindrome.
  * 
- * Psuedo code:
+ * Pseudo code:
  * ============
  * 1. Convert given string into lowercase
  * 2. remove all alphanumeric from string using replaceAll method/ regex [^0-9a-z]
