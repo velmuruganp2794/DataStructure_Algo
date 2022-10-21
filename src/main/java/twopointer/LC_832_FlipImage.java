@@ -2,8 +2,6 @@ package twopointer;
 
 import org.junit.Test;
 
-import preparation.test;
-
 public class LC_832_FlipImage {
 
 	/*
@@ -42,7 +40,7 @@ public class LC_832_FlipImage {
 	 */
 
 	/*
-	 * Complexity: Time complexity = O(n2) Space complexity = O(n)
+	 * Complexity: Time complexity = O(n+m) Space complexity = O(n)
 	 */
 
 	@Test
