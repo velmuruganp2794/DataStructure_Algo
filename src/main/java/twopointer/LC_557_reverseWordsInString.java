@@ -15,7 +15,7 @@ public class LC_557_reverseWordsInString {
 	 Pseudo Code:
 		 1. Use spilt(" ") and store it string array
 		 2. iterate each words in array and reverse 
-		 3. reverse eachword and add it to Stringbuilder 
+		 3. reverse eachword and add it to Stringbuilder.append(); 
 		 4. return output string
 	    		 
 	   */
