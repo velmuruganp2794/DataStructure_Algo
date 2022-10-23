@@ -51,7 +51,26 @@ public class LC_MaximumNumberOfVowels {
 	
 	public int maximumVowels_Sliding(String s, int k){
 		
-		return 0;
+		int max=0, pointer=0, count=0;
+		
+		while(pointer<k){
+			
+			if(s.charAt(pointer)=='a' || s.charAt(pointer)=='e' || s.charAt(pointer)=='i' 
+					|| s.charAt(pointer)=='o' || s.charAt(pointer)=='u'){
+				count++;
+				pointer++;
+			}
+			
+		}
+		max=count;
+		
+		for(int j=k;j<s.length();j++){
+			
+			
+			
+		}
+		
+		return max;
 		
 		
 	}
