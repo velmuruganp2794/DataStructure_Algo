@@ -80,7 +80,7 @@ public class LC_1984_MinimumDifference {
         //Find minimum to first window
         minimum = nums[k-1]-nums[pointer++];
         
-        // Check for next window
+        // Check for next window. Ignore non consecutive window,since difference will always high compare with consecutive numbers.
         System.out.println(minimum);
         for(int j=k;j<nums.length;j++){
         	System.out.println("j="+j+", pointer="+pointer);
