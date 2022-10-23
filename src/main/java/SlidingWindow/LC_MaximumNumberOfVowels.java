@@ -20,8 +20,9 @@ public class LC_MaximumNumberOfVowels {
 	public void positive(){
 		String s = "workaattech";
 		int k=3;
-		int maximumVowels = maximumVowels(s, k);
-		System.out.println(maximumVowels);
+		//int maximumVowels = maximumVowels(s, k);
+		int maximumVowel = maximumVowels_Sliding(s, k);
+		System.out.println(maximumVowel);
 		
 	}
 	
@@ -58,15 +59,23 @@ public class LC_MaximumNumberOfVowels {
 			if(s.charAt(pointer)=='a' || s.charAt(pointer)=='e' || s.charAt(pointer)=='i' 
 					|| s.charAt(pointer)=='o' || s.charAt(pointer)=='u'){
 				count++;
-				pointer++;
+				
 			}
+			pointer++;
 			
 		}
 		max=count;
 		
-		for(int j=k;j<s.length();j++){
+		while(pointer<s.length()) {
 			
+			if(s.charAt(pointer-k)=='a' || s.charAt(pointer-k)=='e' || s.charAt(pointer-k)=='i' 
+					|| s.charAt(pointer-k)=='o' || s.charAt(pointer)=='u') count--;
 			
+			if(s.charAt(pointer)=='a' || s.charAt(pointer)=='e' || s.charAt(pointer)=='i' 
+					|| s.charAt(pointer)=='o' || s.charAt(pointer)=='u') count++;
+			
+			max=Math.max(max, count);
+			pointer++;
 			
 		}
 		
