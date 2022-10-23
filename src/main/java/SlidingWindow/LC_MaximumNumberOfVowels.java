@@ -50,6 +50,17 @@ public class LC_MaximumNumberOfVowels {
 		return max;
 	}
 	
+	/*
+	  Pseudo Code:
+	  1. Find vowels count in first slid by traversing string char till <k
+	  2. Assign it as Maximum = count;
+	  3. traverse from current pointer till s.length
+	  4. Check the pointer-k char is vowel. if yes, count--
+	  5. Check the pointer char is vowel. if yes, count++;
+	  6. Check current count with max if count is > max, re-assign that to maximum
+	  7. retun max;
+	 */
+	
 	public int maximumVowels_Sliding(String s, int k){
 		
 		int max=0, pointer=0, count=0;
