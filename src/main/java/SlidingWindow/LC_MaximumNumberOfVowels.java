@@ -15,14 +15,18 @@ public class LC_MaximumNumberOfVowels {
 	4. check char is vowel.increment count
 	5. after inner loop check math.max(max, count);
     6. return max*/
-		
+	
+	/*Time Complexity: O(n*K)
+	Space Complexity :O(1)
+		*/
+	
 	@Test
 	public void positive(){
 		String s = "workaattech";
 		int k=3;
-		//int maximumVowels = maximumVowels(s, k);
-		int maximumVowel = maximumVowels_Sliding(s, k);
-		System.out.println(maximumVowel);
+		int maximumVowels = maximumVowels(s, k);
+		//int maximumVowel = maximumVowels_Sliding(s, k);
+		System.out.println(maximumVowels);
 		
 	}
 	
@@ -58,8 +62,12 @@ public class LC_MaximumNumberOfVowels {
 	  4. Check the pointer-k char is vowel. if yes, count--
 	  5. Check the pointer char is vowel. if yes, count++;
 	  6. Check current count with max if count is > max, re-assign that to maximum
-	  7. retun max;
+	  7. return max;
 	 */
+	
+	/*Time Complexity: O(n)
+	Space Complexity :O(1)
+		*/
 	
 	public int maximumVowels_Sliding(String s, int k){
 		
