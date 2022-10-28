@@ -53,8 +53,7 @@ public class LC_1004_MaxConsecutiveOnes {
 				start++;
 			}
 			
-			
-			      maxLengthOfOnes = Math.max(maxLengthOfOnes, end-start+1);
+            maxLengthOfOnes = Math.max(maxLengthOfOnes, end-start+1);
 			
 			
 		}
