@@ -28,7 +28,7 @@ public class LC_1317_ConvertInteger {
      */
 
      /*Time Complexity = O(n), Space complexity = O(1)*/
-   /* public int[] getNoZeroIntegers(int n) {
+public int[] getNoZeroIntegers(int n) {
 
         int[] output = new int[2];
 
@@ -45,10 +45,10 @@ public class LC_1317_ConvertInteger {
        }
        
        return output;
-    }    */
+    }    
 
 // Optimize
-    public int[] getNoZeroIntegers(int n) {
+    public int[] getNoZeroIntegers_WithoutStrings(int n) {
 
         int[] output = new int[2];
 		return output;
