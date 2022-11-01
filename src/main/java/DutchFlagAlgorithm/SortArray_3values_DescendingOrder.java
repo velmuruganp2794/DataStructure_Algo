@@ -11,10 +11,11 @@ public class SortArray_3values_DescendingOrder {
 		
 		Example1:
 			input = [1,2,0,1,2]; Input always contains 0,1,2
-			output = [0,1,1,2,2]
+			output = [2,2,1,1,0]
+			
 		Example2:
 			input = ["red", "blue", "red", "white"];
-			output = ["white", "blue", "red", 'red"];
+			output = ["white", "blue", "red", 'red"]; // descending order
 			
 	*/
 	
@@ -46,7 +47,7 @@ public class SortArray_3values_DescendingOrder {
 	
 	public int[] sortArray_DutchFlag(int[] nums){
 		
-		int lowPointer=0, midlePointer=0, highPointer=nums.length-1;
+		int lowPointer=nums.length-1, midlePointer=nums.length-1, highPointer=0;
 		
 		while(midlePointer <= highPointer){
 			
