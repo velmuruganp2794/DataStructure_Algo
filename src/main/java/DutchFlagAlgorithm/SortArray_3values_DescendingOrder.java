@@ -21,10 +21,10 @@ public class SortArray_3values_DescendingOrder {
 	
 	/* Pseudo code: eg for 0,1,2 numbers;
 	 
-	 1. Initialize lowPointer = 0, middlePointer=0, highPointer=length-1;
-	 2. If the array[middlePointer] = 0, Swap the middlepointer and lowpointer values. Increment both the pointer
-	 3. If the array[middlePointer] = 1, increment the middle pointer;
-	 4. If the array[middlePointer] = 2, Swap the middlepointer and highpointer values. Decrement high pointer
+	 1. Initialize lowPointer = length-1, middlePointer=length-1, highPointer=0;
+	 2. If the array[middlePointer] = 0, Swap the middlepointer and lowpointer values. Decrement both the pointer
+	 3. If the array[middlePointer] = 1, Decrement the middle pointer;
+	 4. If the array[middlePointer] = 2, Swap the middlepointer and highpointer values. Increment high pointer
 	 5. Break the loop when middlepointer crosses the high pointer;
 	 
 	 */
@@ -32,7 +32,7 @@ public class SortArray_3values_DescendingOrder {
 	@Test
 	public void example1(){
 		int[] nums = {1,2,0,1,2};
-		int[] outputArray = sortArray_DutchFlag(nums);
+		int[] outputArray = sortArray_DutchFlag_DescendingOrder(nums);
 		System.out.println(Arrays.toString(outputArray));
 		
 	}
@@ -40,31 +40,39 @@ public class SortArray_3values_DescendingOrder {
 	@Test
 	public void example2(){
 		int[] nums = {1,2,0,1,2,0,0,0,0,1,1,1,2};
-		int[] outputArray = sortArray_DutchFlag(nums);
+		int[] outputArray = sortArray_DutchFlag_DescendingOrder(nums);
 		System.out.println(Arrays.toString(outputArray));
 		
 	}
+
+	@Test
+	public void example3(){
+		int[] nums = {1,2,0,1,2,0,0,0,0,2,2,2,2,2,2};
+		int[] outputArray = sortArray_DutchFlag_DescendingOrder(nums);
+		System.out.println(Arrays.toString(outputArray));
+
+	}
 	
-	public int[] sortArray_DutchFlag(int[] nums){
+	public int[] sortArray_DutchFlag_DescendingOrder(int[] nums){
 		
 		int lowPointer=nums.length-1, midlePointer=nums.length-1, highPointer=0;
 		
-		while(midlePointer <= highPointer){
+		while(midlePointer >= highPointer){
 			
 			if(nums[midlePointer]==0){
 				int temp = nums[lowPointer];
 				nums[lowPointer]=nums[midlePointer];
 				nums[midlePointer] = temp;
-				midlePointer++;
-				lowPointer++;
+				midlePointer--;
+				lowPointer--;
 			} else if(nums[midlePointer]==1) {
-				midlePointer++;
+				midlePointer--;
 				
 			} else{
 				int temp=nums[highPointer];
 				nums[highPointer] = nums[midlePointer];
 				nums[midlePointer] = temp;
-				highPointer--;
+				highPointer++;
 			}
 			
 			
