@@ -21,7 +21,7 @@ public class Anagram {
 	
 	@Test
 	public void example1(){
-		String s = "anagram", t="nagaran";
+		String s = "anagram", t="nagaram";
 		//boolean checkAnagram = checkAnagram(s, t);
 		//System.out.println(checkAnagram);
 		//boolean checkAnagram1 = checkAnagram_UsingAsciiValues(s, t);
