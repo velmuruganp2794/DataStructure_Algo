@@ -22,10 +22,10 @@ public class Anagram {
 	@Test
 	public void example1(){
 		String s = "anagram", t="nagaram";
-		//boolean checkAnagram = checkAnagram(s, t);
-		//System.out.println(checkAnagram);
-		//boolean checkAnagram1 = checkAnagram_UsingAsciiValues(s, t);
-		//System.out.println(checkAnagram1);
+		boolean checkAnagram = checkAnagram(s, t);
+		System.out.println(checkAnagram);
+		boolean checkAnagram1 = checkAnagram_UsingAsciiValues(s, t);
+		System.out.println(checkAnagram1);
 		boolean checkAnagram2 = checkAnagram_UsingAsciiValuesIII(s, t);
 		System.out.println(checkAnagram2);
 		
