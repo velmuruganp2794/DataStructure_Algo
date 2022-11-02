@@ -19,9 +19,9 @@ public class LC_1436_DestinationCity {
     @Test
     public void testdata1(){
         List<List<String>> paths = new ArrayList<List<String>>();
-        paths.add(Arrays.asList(new String[] {"London","New York"}));
-        paths.add(Arrays.asList(new String[] {"New York","Lima"}));
-        paths.add(Arrays.asList(new String[] {"Lima","Sao Paulo"}));
+        paths.add(Arrays.asList("London","New York"));
+        paths.add(Arrays.asList("New York","Lima"));
+        paths.add(Arrays.asList("Lima","Sao Paulo"));
         String destination = destCity_Usingmap(paths);
         System.out.println("using map :"+destination);
         String destination2 = destCity_Usingmap_withoutContains(paths);
