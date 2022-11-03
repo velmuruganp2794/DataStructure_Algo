@@ -19,7 +19,7 @@ public class LC_1002_FindCommonChars {
     7. traverse the final map and add the character with number of times in List
     */
 
-    /* Time Complexity - O(n^2), Space Complexity - O(n) */
+    /* Time Complexity - O(n*m), Space Complexity - O(n) */
 
     @Test
     public void testdata1(){
