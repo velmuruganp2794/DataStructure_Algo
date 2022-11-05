@@ -26,7 +26,7 @@ public class LC_771_JewelsAndStones {
     }
 
     @Test
-    public void testdata1(){
+    public void testdata2(){
         String jewels = "z";
         String stones = "ZZ";
         numJewelsInStones(jewels,stones);
