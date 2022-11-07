@@ -2,6 +2,7 @@ package HashMap;
 
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class LC_1876_CountOfSubstringDistinct {
@@ -29,7 +30,7 @@ public class LC_1876_CountOfSubstringDistinct {
         System.out.println(count);
     }
 
-    public int countGoodSubstrings(String s) {
+    public int countGoodSubstrings_BruteForce(String s) {
         int count=0;
 
 
@@ -55,4 +56,25 @@ public class LC_1876_CountOfSubstringDistinct {
         return count;
 
     }
+
+    public int countGoodSubstrings(String s) {
+
+            int count=0,start=0,end=0;
+            HashMap<Character,Integer> map = new HashMap<>();
+            while(end<3){
+                map.put(s.charAt(end),map.getOrDefault(s.charAt(end),0)+1);
+                end++;
+            }
+            if(map.size()==3) count++;
+            for(;end<s.length();end++){
+                map.put(s.charAt(end),map.getOrDefault(s.charAt(end),0)+1); //next charcter
+                //remove start character
+                if(map.get(s.charAt(start))>1) map.put(s.charAt(start), map.get(s.charAt(start))-1);
+                else map.remove(s.charAt(start));
+                if(map.size()==3) count++;
+                start++;
+
+            }
+            return count;
+        }
 }
