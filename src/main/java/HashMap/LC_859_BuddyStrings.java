@@ -1,4 +1,4 @@
-package bruteForce;
+package HashMap;
 
 import java.util.ArrayList;
 import java.util.HashMap;
