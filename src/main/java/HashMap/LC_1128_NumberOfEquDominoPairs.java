@@ -12,7 +12,6 @@ public class LC_1128_NumberOfEquDominoPairs {
     3. when the value is greater than 1, find the count of pair by n*n-1/2
     4. add the pair count with previous count
     5. return pair count.
-
      */
 
     /* Time complexity = O(n), Space Complexity = O(n) */
