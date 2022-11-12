@@ -9,10 +9,11 @@ public class LC_3_LongestSubstringWithoutRepeatingCharacters {
     @Test
     public void testdata1(){
 
-        //String s = "abcabcbb";
+       // String s = "abcabcbb";
         String s = "tmmzuxt";
         //output = 3;
         System.out.println(lengthOfLongestSubstring(s));
+        System.out.println(lengthOfLongestSubstring_Ascii(s));
 
     }
 
@@ -22,6 +23,7 @@ public class LC_3_LongestSubstringWithoutRepeatingCharacters {
         String s = "bbbbb";
         //output = 1;
         System.out.println(lengthOfLongestSubstring(s));
+        System.out.println(lengthOfLongestSubstring_Ascii(s));
 
     }
 
@@ -31,6 +33,7 @@ public class LC_3_LongestSubstringWithoutRepeatingCharacters {
         String s = "pwwkew";
         //output = 3;
         System.out.println(lengthOfLongestSubstring(s));
+        System.out.println(lengthOfLongestSubstring_Ascii(s));
 
     }
 
@@ -70,5 +73,35 @@ public class LC_3_LongestSubstringWithoutRepeatingCharacters {
         }
 
 return maxCount;
+    }
+
+    public int lengthOfLongestSubstring_Ascii(String s) {
+        /* Pseudo code
+        1. declare array with 26 size. considering only lowercase
+        2. use two pointer start, end = 0
+        3. increment value in array of character - 'a' position
+        4. if value greater than 1, decrement array of starting character value till value of end character less than 1.
+        5.
+        6.
+        */
+
+        int start=0;
+        int maxCount=0;
+        int[] arr = new int[26];
+
+       for(int end=0;end<s.length();end++){
+           arr[s.charAt(end)-'a']++;
+
+           while(arr[s.charAt(end)-'a'] > 1){
+               arr[s.charAt(start)-'a']--;
+               start++;
+           }
+
+           maxCount=Math.max(maxCount,end-start+1);
+
+
+       }
+
+        return maxCount;
     }
 }

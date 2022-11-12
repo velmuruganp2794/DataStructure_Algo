@@ -1,44 +1,47 @@
 package twopointer;
 
+import org.junit.Test;
+
 public class LC_27_RemoveElementinArray {
 
-	public static void main(String[] args) {
-		
-		LC_27_RemoveElementinArray obj = new LC_27_RemoveElementinArray();
-		obj.removeElement(new int[] {3,2,2,3}, 3);
-		
-
+	/* Pseudocode
+	1. Declare start=0, end equal to length-1;
+	2. Traverse each element in array
+	3. if nums[start] equal to val, assign end value to start and decrement end
+	4. if nums[start] not equal to val, increment start
+	5. do the same till start<=end
+	6. return end+1;
+	 */
+     @Test
+	public void testdata1(){
+		int[] nums = {3,2,2,3};
+		int val = 3;
+		//Output: 2, nums = [2,2,_,_]
+		 System.out.println(removeElement_Optimized(nums,val));
 	}
-	
-	public int removeElement(int[] nums, int val) {
-	      int start = 0, end=nums.length-1, count=0;
 
-	      if(nums.length==0) return 0;
-	      if(nums.length==1 && nums[0]==val) return count;
-	      
-	        while(start < end){
-	            System.out.println(start+ ", end"+end);
-	           if(nums[start]==val && nums[end]!=val ){
+	@Test
+	public void testdata2(){
+		int[] nums = {0,1,2,2,3,0,4,2};
+		int val = 2;
+		//Output: 5
+		System.out.println(removeElement_Optimized(nums,val));
+	}
 
-	               int temp=nums[start];
-	               nums[start] = nums[end];
-	               nums[end]=temp;
-	           }
-
-	           if(nums[start]!=val) start++;
-	           
-	           if(nums[end]==val){
-	               nums[end]=0;
-	               end--;
-	               count++;
-
-	           }
-	           
-
-	        }
-	        if(nums[start]==val && start==end) count++;
-	        return nums.length-count;
-	        
-	    }
+	public int removeElement_Optimized(int[] nums, int val) {
+		int left = 0;
+		int right = nums.length-1;
+		if(nums.length==0) return 0;
+		while (left <= right) {
+			if (nums[left] == val) {
+				nums[left] = nums[right];
+				// reduce array size by one
+				right--;
+			} else {
+				left++;
+			}
+		}
+		return right+1;
+	}
 
 }

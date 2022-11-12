@@ -1,8 +1,31 @@
 package HashMap;
 
+import org.junit.Test;
+
 import java.util.HashMap;
 
 public class LC_13_RomanToIntegr {
+
+    @Test
+    public void testdata1(){
+        String s = "III";
+        int output = romanToInt(s);
+        // Output: 3
+    }
+
+    @Test
+    public void testdata2(){
+        String s = "LVIII";
+        int output = romanToInt(s);
+        // Output: 3
+    }
+
+    @Test
+    public void testdata3(){
+        String s = "MCMXCIV";
+        int output = romanToInt(s);
+        // Output: 3
+    }
 
 
     public int romanToInt(String s) {
