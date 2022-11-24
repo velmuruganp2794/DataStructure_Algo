@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class SquaresOfSortedArray {
+public class LC_977_SquaresOfSortedArray {
     /*Pseudo-code
     1. Declare output array with same input size
     2. use two pointer, left =0, right = length-1
