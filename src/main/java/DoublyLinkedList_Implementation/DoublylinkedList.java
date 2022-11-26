@@ -152,4 +152,38 @@ public class DoublylinkedList {
 
     }
 
+    public void addAll(int[] values){
+        for(int val:values){
+            add(val);
+        }
+    }
+
+    public void removeAll(int value){
+
+
+        Node current = head;
+        while(current!=null){
+
+            if(current.value==value) {
+                if (current.prev == null) { // Remove head
+                    head = head.next;
+
+                } else if (current.next != null) {
+
+                    current.prev.next = current.next;
+                    current.next.prev = current.prev;
+
+                } else {
+                    tail = current.prev;
+                    current.prev.next = null;
+
+                }
+                length--;
+
+
+            }
+            current = current.next;
+        }
+    }
+
 }

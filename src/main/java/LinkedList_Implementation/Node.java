@@ -1,11 +1,16 @@
 package LinkedList_Implementation;
 
 public class Node {
-    int value;
-    Node next;
+   public int value;
+    public Node next;
 
     public Node(int value){ //1
         this.value = value;
         next = null;
+    }
+
+    public Node(int value, Node temp){
+        this.value = value;
+        this.next = temp;
     }
 }

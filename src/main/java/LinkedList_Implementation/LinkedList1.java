@@ -2,8 +2,8 @@ package LinkedList_Implementation;
 
 public class LinkedList1 {
 
-    Node head;
-    Node tail;
+   public Node head;
+    public Node tail;
     int length;
 
     //add the node to list. if list is empty, first node will be head. tail equal to head; else element need to be added to last element;
@@ -210,5 +210,12 @@ public class LinkedList1 {
         }
         length++;
     }
+
+    public void addAll(int[] values){
+        for(int val:values){
+            add(val);
+        }
+    }
+
 
 }
