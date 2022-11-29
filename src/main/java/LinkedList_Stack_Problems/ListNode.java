@@ -1,4 +1,4 @@
-package LinkedList_Problems;
+package LinkedList_Stack_Problems;
 
 public class ListNode {
     int val;

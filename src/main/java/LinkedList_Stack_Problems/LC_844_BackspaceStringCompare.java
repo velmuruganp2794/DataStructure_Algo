@@ -1,4 +1,4 @@
-package LinkedList_Problems;
+package LinkedList_Stack_Problems;
 
 import org.junit.Test;
 

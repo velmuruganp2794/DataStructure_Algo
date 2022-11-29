@@ -87,10 +87,10 @@ public class Anagram {
 			countt[t.charAt(i)-'a'] = countt[t.charAt(i)-'a']+1;
 					
 		}
-		
-		for(int i=0;i<counts.length;i++){
-			if(counts[i] != countt[i]) return false;
-			
+
+		for(int i=0;i<s.length();i++){ // Since length are equal
+			if(counts[s.charAt(i)-'a'] != countt[s.charAt(i)-'a']) return false;
+
 		}
 		
 		

@@ -1,9 +1,5 @@
 package LinkedList_Implementation;
 
-import LinkedList_Implementation.LinkedList1;
-import LinkedList_Implementation.LinkedList_impl;
-import LinkedList_Implementation.Node;
-import LinkedList_Problems.ListNode;
 import org.junit.Test;
 
 public class LC_21_MergeTwoSortedList {

@@ -1,4 +1,4 @@
-package LinkedList_Problems;
+package LinkedList_Stack_Problems;
 
 public class LC_83_RemoveDuplicatefromSortedList {
     /* Pseudo code

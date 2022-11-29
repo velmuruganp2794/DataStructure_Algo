@@ -1,7 +1,5 @@
 package LinkedList_Implementation;
 
-import LinkedList_Problems.ListNode;
-
 import java.util.HashSet;
 
 public class LC_141_LinkedListCycle {
