@@ -1,4 +1,4 @@
-package SlidingWindow.Stack_Problems;
+package Stack_Problems;
 
 import java.util.Stack;
 

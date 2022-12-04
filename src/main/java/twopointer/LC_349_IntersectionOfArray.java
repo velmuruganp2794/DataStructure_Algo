@@ -8,12 +8,12 @@ public class LC_349_IntersectionOfArray {
 
 	public static void main(String[] args) {
 		LC_349_IntersectionOfArray obj = new LC_349_IntersectionOfArray();
-		int[] intersection = obj.intersection(new int[] {3,2,2,3}, new int[]{2,2});
+		int[] intersection = obj.intersection_Optimized(new int[] {3,2,2,3}, new int[]{2,2});
 		System.out.println(Arrays.toString(intersection));
 
 	}
 	
-	public int[] intersection(int[] nums1, int[] nums2) {
+	public int[] intersection_BruteForce(int[] nums1, int[] nums2) {
         int i=0;
         int len1 = nums1.length;
         int len2 = nums2.length;
@@ -41,6 +41,33 @@ public class LC_349_IntersectionOfArray {
         output[k++]=setItems;
        }
        return output;
+
+    }
+
+    public int[] intersection_Optimized(int[] nums1, int[] nums2) {
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+
+        Set<Integer> set = new HashSet<>();
+        int m=0,n=0;
+        while(m< nums1.length && n< nums2.length){
+            if(nums1[m]==nums2[n]) {
+                set.add(nums1[m]);
+                m++;n++;
+            }
+            else if (nums1[m]<nums2[n]){
+                m++;
+            }
+            else{
+                n++;
+            }
+        }
+        int[] output = new int[set.size()];
+        int j=0;
+        for (int i:set) {
+            output[j++]=i;
+        }
+        return output;
 
     }
 

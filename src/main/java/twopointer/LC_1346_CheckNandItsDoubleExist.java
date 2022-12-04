@@ -61,7 +61,7 @@ public class LC_1346_CheckNandItsDoubleExist {
         return false;
     }
    
- //Approach 2. Time complexity = O(n^2), Space complexity = O(n)
+ //Approach 2. Time complexity = O(n), Space complexity = O(n)
    public boolean checkIfExist_hashSet(int[] arr) {
        
        HashSet<Integer> set = new HashSet<Integer>();
