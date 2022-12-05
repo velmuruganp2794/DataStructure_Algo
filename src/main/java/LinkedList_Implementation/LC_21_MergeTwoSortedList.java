@@ -44,26 +44,20 @@ public class LC_21_MergeTwoSortedList {
     public Node mergeTwoLists(Node list1, Node list2) {
         Node temp = new Node(0);
         Node sortedListHead = temp;
-        
-        if(list1==null) return list2;
-        if(list2==null) return  list1;
 
         while(list1!=null && list2!=null){
 
-            if(list1.value<list2.value){
+            if(list1.value<list2.value){ //Recursive
                 temp.next = list1;
                 temp = temp.next;
                 list1 = list1.next;
-
-            } else {
+            } else { //Recursive
                 temp.next = list2;
                 temp = temp.next;
                 list2 = list2.next;
             }
 
-
         }
-
         if(list1!=null) temp.next = list1;
         if(list2!=null) temp.next = list2;
 
