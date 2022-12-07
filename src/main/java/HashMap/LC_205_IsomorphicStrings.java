@@ -60,4 +60,21 @@ public class LC_205_IsomorphicStrings {
         return true;
 
     }
+
+    public boolean isIsomorphic_Ascii(String s, String t) {
+        int[] sMap=new int[128];
+        int[] tMap=new int[128];
+        char sChar,tChar;
+
+        for(int i=s.length()-1;i>=0;i--){
+            sChar = s.charAt(i);
+            tChar = t.charAt(i);
+
+            if(sMap[sChar]!=tMap[tChar]) return false;
+
+            sMap[sChar] = i;
+            tMap[tChar] = i;
+        }
+        return true;
+    }
 }

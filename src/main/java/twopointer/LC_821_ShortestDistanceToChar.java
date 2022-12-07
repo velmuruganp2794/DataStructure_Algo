@@ -31,4 +31,45 @@ public class LC_821_ShortestDistanceToChar {
         return output;
     }
 
+    public int[] shortestToChar_optimized(String s, char c) {
+        int output[] = new int[s.length()];
+
+        int right,left;
+
+        for(int i=0;i<s.length();i++){
+
+            left=i;
+            right=i;
+            int distance = Integer.MAX_VALUE;
+
+            while(left>=0){
+
+                if(s.charAt(left)==c) {
+                      distance = Math.min(distance,Math.abs(i-left));
+                      break;
+                }
+                left--;
+
+            }
+
+            while(right<=s.length()-1){
+
+                if(s.charAt(right)==c) {
+                    distance = Math.min(distance,Math.abs(i-right));
+                    break;
+                }
+                right++;
+            }
+            output[i] = distance;
+
+
+        }
+
+
+
+
+
+        return output;
+    }
+
 }

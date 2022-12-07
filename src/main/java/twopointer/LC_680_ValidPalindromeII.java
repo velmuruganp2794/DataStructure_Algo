@@ -38,7 +38,8 @@ public class LC_680_ValidPalindromeII {
 		System.out.println(validPalindrome);
 		
 	}
-	
+
+
 	public boolean validPalindrome(String s) {
 
 		int left = 0, right = s.length() - 1;

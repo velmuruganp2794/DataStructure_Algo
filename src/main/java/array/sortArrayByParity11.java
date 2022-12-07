@@ -1,11 +1,14 @@
 package array;
 
+import java.util.Arrays;
+
 public class sortArrayByParity11 {
 
 	public static void main(String[] args) {
 		
 		sortArrayByParity obj = new sortArrayByParity();
-		obj.sortArrayByParity(new int[] {4,2,5,7});
+		int[] ints = obj.sortArrayByParity(new int[]{4, 2, 5, 7});
+		System.out.println(Arrays.toString(ints));
 
 	}
 	
