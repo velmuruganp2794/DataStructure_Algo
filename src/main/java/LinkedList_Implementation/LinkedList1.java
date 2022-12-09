@@ -113,7 +113,6 @@ public class LinkedList1 {
                 previous.next=previous.next.next;
                 length--;
                 break;
-
             } else if(previous.next.next==null && previous.next.value==value){
                 previous.next = null;
                 tail=previous;
@@ -177,8 +176,8 @@ public class LinkedList1 {
     }
 
     public void removeAll(int value){
-
-        if(head.value==value){ // Remove head
+        if(head==null) return ;
+        while(head.value==value){ // Remove head
             head = head.next;
             length--;
         }
