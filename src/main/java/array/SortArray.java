@@ -22,6 +22,8 @@ public class SortArray {
 		int[] num = {1,2,0,1,2};
 		int[] sortArray = sortArray(num);
 		System.out.println(Arrays.toString(sortArray));
+		String.valueOf(num);
+
 		
 	}
 	

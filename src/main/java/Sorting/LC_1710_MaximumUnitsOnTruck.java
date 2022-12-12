@@ -34,19 +34,19 @@ public class LC_1710_MaximumUnitsOnTruck {
     public int maximumUnits(int[][] boxTypes, int truckSize) {
 
         //Comparator
-        Arrays.sort(boxTypes, (i,j) -> Integer.compare(j[1], i[1]));
+        Arrays.sort(boxTypes, (i, j) -> Integer.compare(j[1], i[1]));
 
         System.out.println(Arrays.deepToString(boxTypes));
-        int numberOfBox=0, numberOfUnit=0;
-        int i=0;
-        while(numberOfBox<truckSize && i<boxTypes.length) {
-               numberOfBox = numberOfBox + boxTypes[i][0];
-               numberOfUnit = numberOfUnit + (boxTypes[i][0] * boxTypes[i++][1]);
+        int numberOfBox = 0, numberOfUnit = 0;
+        int i = 0;
+        while (numberOfBox < truckSize && i < boxTypes.length) {
+            numberOfBox = numberOfBox + boxTypes[i][0];
+            numberOfUnit = numberOfUnit + (boxTypes[i][0] * boxTypes[i++][1]);
 
         }
-        if(numberOfBox>truckSize){
-            numberOfUnit = numberOfUnit - ((numberOfBox-truckSize) * boxTypes[i-1][1]);
+        if (numberOfBox > truckSize) {
+            numberOfUnit = numberOfUnit - ((numberOfBox - truckSize) * boxTypes[i - 1][1]);
         }
-        return  numberOfUnit;
+        return numberOfUnit;
     }
 }
