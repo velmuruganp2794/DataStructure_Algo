@@ -19,7 +19,8 @@ public class LC_1876_CountOfSubstringDistinct {
      @Test
     public void testdata1(){
         String s = "xyzzaz";
-        int count = countGoodSubstrings(s);
+        //int count = countGoodSubstrings(s);
+         int count = countGoodSubstrings_UsingSet(s);
          System.out.println(count);
     }
 
@@ -77,4 +78,27 @@ public class LC_1876_CountOfSubstringDistinct {
             }
             return count;
         }
+
+
+    public int countGoodSubstrings_UsingSet(String s) {
+
+        int start=0, end=0,count=0;
+        HashSet<Character> set = new HashSet<>();
+
+        for(;end<s.length();end++){
+
+            while(set.contains(s.charAt(end))){
+
+                set.remove(s.charAt(start++));
+            }
+            set.add(s.charAt(end));
+
+            if(set.size()==3){
+                count++;
+                set.remove(s.charAt(start++));
+            }
+
+        }
+        return count;
+    }
 }
