@@ -1,4 +1,6 @@
 package SlidingWindow;
 
-public class LC_395_LongestSubstringWithAtLeastKRepChars {
+public class
+
+LC_395_LongestSubstringWithAtLeastKRepChars {
 }

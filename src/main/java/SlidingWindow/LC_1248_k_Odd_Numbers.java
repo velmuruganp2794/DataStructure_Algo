@@ -22,7 +22,9 @@ public class LC_1248_k_Odd_Numbers {
 
         int[] nums = {1,1,2,1,1};
         int k = 3;
-        numberOfSubarrays(nums,k);
+      //  numberOfSubarrays(nums,k);
+        int out = numberOfSubarrays_Silde(nums, k);
+        System.out.println(out);
         //output = 2;
 
     }
@@ -32,7 +34,9 @@ public class LC_1248_k_Odd_Numbers {
 
         int[] nums = {2,4,6};
         int k = 3;
-        numberOfSubarrays(nums,k);
+       // int out = numberOfSubarrays(nums, k);
+         int out = numberOfSubarrays_Silde(nums, k);
+        System.out.println(out);
         //output = 0;
 
     }
@@ -42,8 +46,10 @@ public class LC_1248_k_Odd_Numbers {
 
         int[] nums = {2,2,2,1,2,2,1,2,2,2};
         int k = 2;
-        numberOfSubarrays(nums,k);
-        //output = 14;
+        //int out = numberOfSubarrays(nums, k);
+        int out = numberOfSubarrays_Silde(nums, k);
+        System.out.println(out);
+        //output = 16;
 
     }
 
@@ -62,5 +68,24 @@ public class LC_1248_k_Odd_Numbers {
             count += j - i + 1;
         }
         return count;
+    }
+
+    public int numberOfSubarrays_Silde(int[] nums, int k) {
+        int k1 = atMost_Slide(nums, k);
+        int k2 = atMost_Slide(nums, k - 1);
+        return  k1 - k2 ;
+    }
+    public int atMost_Slide(int[] nums, int k) {
+        int count=0, start=0, oddCount=0;
+        for(int end=0;end<nums.length;end++){
+            if(nums[end]%2!=0) oddCount++;
+            while(oddCount>k){
+                if(nums[start]%2!=0) oddCount--;
+                start++;
+            }
+            count = count + (end-start+1);
+        }
+        return count;
+
     }
 }
