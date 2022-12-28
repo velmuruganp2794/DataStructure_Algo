@@ -1,5 +1,6 @@
 package bruteForce;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map.Entry;
@@ -27,20 +28,24 @@ public class LC_1763_LongestNiceSubstring {
 	 */
 	
 	
-	//@Test
+	@Test
 	public void positive(){
 		
 		String s="YazaAay";
-		String longestNiceSubstring = longestNiceSubstring(s);
+		/*String longestNiceSubstring = longestNiceSubstring(s);
+		System.out.println(longestNiceSubstring);*/
+		String longestNiceSubstring = longestNiceSubstring_(s);
 		System.out.println(longestNiceSubstring);
 	}
 	
-	//@Test
+	@Test
 	public void positive1(){
 		
 		String s="Bb";
 		String longestNiceSubstring = longestNiceSubstring(s);
 		System.out.println(longestNiceSubstring);
+		String longestNiceSubstring1 = longestNiceSubstring_(s);
+		System.out.println(longestNiceSubstring1);
 	}
 	
 	@Test
@@ -49,6 +54,8 @@ public class LC_1763_LongestNiceSubstring {
 		String s="ccccccccccccccccccccccccccccC";
 		String longestNiceSubstring = longestNiceSubstring(s);
 		System.out.println(longestNiceSubstring);
+		String longestNiceSubstring1 = longestNiceSubstring_(s);
+		System.out.println(longestNiceSubstring);
 	}
 	
 	@Test
@@ -56,6 +63,8 @@ public class LC_1763_LongestNiceSubstring {
 		
 		String s="c";
 		String longestNiceSubstring = longestNiceSubstring(s);
+		System.out.println(longestNiceSubstring);
+		String longestNiceSubstring1 = longestNiceSubstring_(s);
 		System.out.println(longestNiceSubstring);
 	}
 	
@@ -107,5 +116,48 @@ public class LC_1763_LongestNiceSubstring {
 	          return true;
 
 	    }
+
+	public String longestNiceSubstring_(String s) {
+
+		int maxlength=0;
+		int[] len = new int[2];
+		for(int i=0;i<s.length();i++){
+
+			for(int j = i+1;j<s.length();j++){
+
+				if(maxlength < j-i+1 && isNice(s,i,j)){
+					len[0] = i;
+					len[1] = j;
+					maxlength = j-i+1;
+				}
+
+			}
+
+		}
+		System.out.println(Arrays.toString(len));
+
+		return s.substring(len[0],len[1]+1);
+
+
+	}
+
+	public boolean isNice(String s1, int start, int end){
+
+		HashSet<Character> set = new HashSet<>();
+		while(start<=end){
+			set.add(s1.charAt(start++));
+		}
+
+		for(char c:set){
+
+			if(Character.isLowerCase(c) && ! set.contains(Character.toUpperCase(c)))
+				return false;
+			if(Character.isUpperCase(c) && ! set.contains(Character.toLowerCase(c)))
+				return false;
+
+		}
+		return true;
+	}
+
 
 }
